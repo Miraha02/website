@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    scroll-behavior: smooth;
+}
+p{
+    color: white;
+    font-size: 1.2rem;
+}
+
+body{
+    font-size: 62.5%;
+    margin: 0;
+    font-family:'Poppins',sans-serif;
+    text-align: center;
+    position: relative;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(40,44,39,0.57);
+
+}
+header a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-size: 0 0em, 0% 0em;
+    transition: background-size 400ms;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+header, .header *{
+    z-index: 1000;
+}
+.menu a:first-child{
+    background:
+            linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
+            linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    background-position: 100% 100%, 0 115%;
+    background-repeat: no-repeat;
+
+    background-size: 0 0.35em, 100% 0.35em;
+}
+.menu a:first-child:hover{
+    background:
+            linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+            linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1));
+    background-position: 100% 100%, 0 108%;
+    background-repeat: no-repeat;
+
+    background-size: 0 0.2em, 100% 0.2em;
+}
+header a:hover{
+    background:
+            linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+            linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1));
+    background-position: 100% 100%, 0 108%;
+    background-repeat: no-repeat;
+
+    background-size: 0 0.2em, 100% 0.2em;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header > *{
+    margin: 0 7rem;
+}
+
+#main *:not(.degrade, header, .header *,.degrade-liste){
+    z-index: 999;
+}
+.degrade{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: linear-gradient(rgba(2,0,36,0) 0%, rgba(108,42,125,0.6674019949776786) 80%);
+}
+.menu{
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+    align-items: center;
+}
+.fond_img{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/fond_index.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-origin: border-box;
+    position: relative;
+}
+.accueil{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+
+}
+.accueil *{
+    z-index: 2;
+}
+.logo{
+    width: 20rem;
+}
+
+.titre{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .2s linear;
+}
+
+.titre h1{
+    font-size: 10rem;
+    margin: -4rem;
+}
+
+.titre h2{
+    font-size: 3rem;
+    z-index: 1000;
+}
+
+.couleur{
+    color: #984cae;
+}
+.couleur:before{
+    content: "\00a0";
+}
+.couleur:after{
+    content: "\00a0";
+}
+
+.sous-titre{
+    display: flex;
+}
+
+.top-film h2{
+    font-size: 3rem;
+    margin: -2rem 0;
+}
+
+
+.film{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 3rem 0;
+}
+
+.film1{
+    display: flex;
+}
+.titre_film{
+    font-size: 2rem;
+    margin: -0.5rem 0 -1rem;
+}
+.contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.img_accueil{
+    border-radius: 15px;
+    margin-right: 15px;
+    box-shadow: 3px 3px 10px #000;
+    width: 9rem;
+    height: 12rem;
+    overflow: hidden;
+}
+.img_accueil .img-film{
+    height: auto;
+    width: 9rem;
+}
+
+.details{
+    font-size: 1.2rem;
+}
+
+.notes{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: -0.5rem 0;
+}
+.note{
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin: -.5rem 0;
+}
+
+/* <-----------------------------------tendances--------------------------------> */
+
+.container{
+    width: 100rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.tendances-actuelles{
+    background-color: rgba(108,42,125,0.6674019949776786);
+    color: white;
+}
+.tendances{
+    display: flex;
+    justify-content: space-between
+}
+.tendances_titre{
+    text-align: left;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+}
+.img_tendances{
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #000;
+    width: 17rem;
+    height: 23.5rem;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+.img_tendances .img-film-tendances{
+    height: auto;
+    width: 17rem;
+}
+
+/* <-----------------------------------liste--------------------------------> */
+
+.liste-globale{
+    position: relative;
+    width: 100%;
+    background-image: url("../img/CATALOGUE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-origin: border-box;
+    position: relative;
+    color: white;
+}
+.degrade-liste{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(2,0,36,0.8) 0%, rgba(56,0,85,0.5) 5%, rgba(229,0,242,0.3) 8%, rgba(108,42,125,0.6674019949776786) 100%);
+    z-index: 0;
+}
+.liste-film{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 120rem;
+    grid-column-gap: 5.4%;
+}
+
+
+.img_liste{
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #000;
+    width: 17rem;
+    height: 23.5rem;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+.img_liste .img-film-liste{
+    height: auto;
+    width: 17rem;
+}
+.element-film{
+    max-width: 17rem;
+    margin-bottom: 4rem;
+}
+.liste-globale a{
+    color: white;
+    text-decoration: none;
+    width: 21rem;
+}
+.liste-globale a img{
+    transition: all 0.2s ease-in;
+}
+.liste-globale a:hover img {
+    transform: scale(1.25);
+}
+.element-film:hover{
+    background-color: rgba(152, 76, 174, 1);
+}
+.element-film{
+    background-color: purple;
+    padding: 0 2rem;
+    transition: all 0.5s;
+}
+.element-film .titre_film{
+    min-height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.element-film{
+    padding-bottom: 3rem;
+}
+/* <-----------------------------------show--------------------------------> */
+.show{
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/POP'UP_SERIE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-origin: border-box;
+}
+.info{
+    background: linear-gradient(rgba(192,192,192,0.7) 62%, rgba(105,105,105,0.4) 62%);
+}
+.info-titre{
+    display: flex;
+}
+.info-haut{
+    display: flex;
+    padding-top: 14rem;
+    color: white;
+}
+.info-haut h1{
+    font-size: 7rem;
+}
+.info-haut img{
+    width: 16rem;
+    height: auto;
+}
+.info-show{
+    background-color: rgba(105,105,105,0.4);
+}
+.info-droit-haut{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 5rem;
+}
+.info-droit-haut h1,.info-droit-haut h2{
+    margin: 0;
+
+}
+.info-droit-haut h1{
+    margin-top: -2.5rem;
+}
+.info-droit-haut h2{
+    font-size: 3rem;
+    margin-top: -1rem;
+}
+.info-droit-bas h2:first-of-type{
+    text-align: left;
+    font-size: 2rem;
+    padding-left: 5rem;
+    padding-top: 2rem;
+}
+.info-droit-bas h2{
+    margin: 0;
+    text-align: left;
+    font-size: 2rem;
+    padding-left: 5rem;
+}
+.info-description{
+    margin: 0;
+    color: white;
+}
+.info-description p, .info-description h2{
+    margin: 0;
+}
+
+.serie_statut{
+    overflow-y: scroll;
+    max-height: 30rem;
+}
+
+.info-show>div{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    color: white;
+
+}
+.info-show div > div{
+    flex-basis: 40%;
+
+}
+.info-show div h2 {
+    margin: 0;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.info-show div p {
+    font-size: 1.5rem;
+}
+.info-show div:nth-of-type(2){
+    background-color: rgba(152, 76, 174, 0.4);
+    padding : 2rem;
+}
+.serie_statut::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #984cae;
+}
+
+.serie_statut::-webkit-scrollbar-thumb {
+    background: #984cae;
+}
+.utilisateur_post{
+    color: white;
+    font-size: 2rem;
+}
+.les_com{
+    font-size: 3rem;
+    text-align: left;
+    color: white;
+}
+form {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.message{
+    text-align: justify;
+}
